@@ -1,0 +1,20 @@
+{
+  "name": "aws-nextjs-router-redirection-issue-reproduction",
+  "version": "0.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "sst dev",
+    "infra:deploy": "sst deploy --stage sandbox",
+    "infra:remove": "sst remove --stage sandbox"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "typescript": "5.3.3"
+  },
+  "dependencies": {
+    "sst": "3.17.25"
+  }
+}
