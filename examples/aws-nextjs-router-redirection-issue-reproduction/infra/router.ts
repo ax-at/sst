@@ -1,8 +1,10 @@
-export const router = $app.stage === "sandbox"
-  ? new sst.aws.Router("SharedRouter", {
-      domain: {
-        name: "sandbox.bodymentor.click",
-        aliases: ["*.sandbox.bodymentor.click"]
-      }
-    })
-  : undefined;
+const stage = $app.stage;
+
+const domain = `${stage}.${process.env.SST_DOMAIN!}`;
+
+export const router = new sst.aws.Router("SharedRouter", {
+  domain: {
+    name: domain,
+    aliases: [`*.${domain}`]
+  }
+});

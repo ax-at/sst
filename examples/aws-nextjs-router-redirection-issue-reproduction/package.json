@@ -7,8 +7,8 @@
   ],
   "scripts": {
     "dev": "sst dev",
-    "infra:deploy": "sst deploy --stage sandbox",
-    "infra:remove": "sst remove --stage sandbox"
+    "infra:deploy": "sst deploy",
+    "infra:remove": "sst remove"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",

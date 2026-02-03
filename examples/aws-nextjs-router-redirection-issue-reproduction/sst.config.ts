@@ -6,6 +6,11 @@ export default $config({
       name: "sst-nextjs-issue",
       removal: input?.stage === "production" ? "retain" : "remove",
       home: "aws",
+      providers: {
+        aws: {
+          profile: process.env.AWS_PROFILE ?? "default",
+        },
+      },
     };
   },
   async run() {
